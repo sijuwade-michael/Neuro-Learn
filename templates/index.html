@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurolearn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ url_for('static', filename='images/favicon-big.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon-big.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a class="nav-logo" href="#home" aria-label="NEURO-LEARN home">
+                <img src="{{ url_for('static', filename='images/logo2.png') }}" alt="NEURO-LEARN logo">
+                <span class="brand-wordmark"><span>NEURO</span><span>LEARN</span></span>
+            </a>
+
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#how">How It Works</a>
+                <a href="#team">Our Team</a>
+                <a href="#download">Download App</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <p class="hero-label">AI-POWERED LEARNING</p>
+                    <h1>Every Child Deserves To Be <span>Understood.</span></h1>
+                    <p class="hero-subheading">NEURO-LEARN detects learning difficulties in children aged 2&ndash;12 through games they love to play &mdash; while the AI screens silently in the background.</p>
+
+                    <div class="hero-actions" aria-label="Hero actions">
+                        <a class="btn btn-primary" href="#how">See How It Works</a>
+                        <a class="btn btn-secondary" href="#team">Meet The Team</a>
+                    </div>
+
+                    <div class="hero-stats" aria-label="NEURO-LEARN impact statistics">
+                        <div class="stat-item reveal-up">
+                            <strong class="count-up" data-count="7" data-suffix="M+">0M+</strong>
+                            <span>Children in Nigeria</span>
+                        </div>
+                        <div class="stat-item reveal-up">
+                            <strong class="count-up" data-count="89" data-suffix="%">0%</strong>
+                            <span>Learning poverty rate</span>
+                        </div>
+                        <div class="stat-item reveal-up">
+                            <strong class="static-stat">Ages<br>2&ndash;12</strong>
+                            <span>Target range</span>
+                        </div>
+                        <div class="stat-item reveal-up">
+                            <strong class="count-up" data-count="3">0</strong>
+                            <span>Difficulty domains</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-label="Child using NEURO-LEARN">
+                    <div class="image-frame">
+                        <img src="{{ url_for('static', filename='images/child1.jpg') }}" alt="Nigerian boy reading">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="problem-section" id="about">
+            <div class="problem-container">
+                <div class="problem-copy">
+                    <p class="section-label reveal-up">THE PROBLEM</p>
+                    <h2 class="reveal-up">Millions of children are struggling.<span>Nobody knows why.</span></h2>
+                    <p class="reveal-up">Across Nigeria and West Africa, learning difficulties go undetected for years. No screening tools. No specialist support. No answers for parents who know something is wrong but cannot name it.</p>
+                </div>
+
+                <div class="problem-split">
+                    <div class="problem-image reveal-left">
+                        <img src="{{ url_for('static', filename='images/child2.jpg') }}" alt="Father and son using a tablet">
+                    </div>
+
+                    <div class="problem-stats-panel" aria-label="Problem statistics">
+                        <article class="problem-stat reveal-up">
+                            <strong class="count-up" data-count="7000000" data-suffix="+" data-format="comma">0+</strong>
+                            <p>Children with disabilities in Nigeria</p>
+                            <span>Source: UNICEF</span>
+                        </article>
+                        <article class="problem-stat reveal-up">
+                            <strong class="count-up" data-count="15000000" data-suffix="+" data-format="comma">0+</strong>
+                            <p>Children with developmental disorders across Sub-Saharan Africa</p>
+                        </article>
+                        <article class="problem-stat reveal-up">
+                            <strong class="count-up" data-count="89" data-suffix="%">0%</strong>
+                            <p>Cannot read age-appropriate text by age 10</p>
+                            <span>Source: World Bank</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-section" id="how">
+            <div class="how-container">
+                <div class="how-intro">
+                    <p class="section-label reveal-up">HOW IT WORKS</p>
+                    <h2 class="reveal-up">Simple for children.<span>Powerful underneath.</span></h2>
+                    <p class="reveal-up">Every game the child plays is secretly collecting data. Every tap, every delay, every mistake is a signal. The child never feels assessed. The AI never stops watching.</p>
+                </div>
+
+                <div class="steps-grid" aria-label="How NEURO-LEARN works">
+                    <article class="step-card">
+                        <span>01</span>
+                        <h3>The Child Plays</h3>
+                        <p>Age-based games designed for children from 2 to 12 years old. Every level matches their developmental stage — colorful, engaging, and fun. They never know what is happening beneath the surface.</p>
+                    </article>
+                    <article class="step-card">
+                        <span>02</span>
+                        <h3>The AI Watches</h3>
+                        <p>Every interaction generates data. Response times, error patterns, task completion rates, and engagement duration are collected and analysed in real time by the embedded screening engine.</p>
+                    </article>
+                    <article class="step-card">
+                        <span>03</span>
+                        <h3>Learning Adapts</h3>
+                        <p>Content adjusts automatically based on the child's unique performance profile. A child struggling with reading receives more targeted phonics exercises at exactly the right level.</p>
+                    </article>
+                    <article class="step-card">
+                        <span>04</span>
+                        <h3>Parents Are Informed</h3>
+                        <p>When the AI detects consistent patterns of difficulty, parents and teachers receive a clear, plain-language alert through the dashboard — with recommended next steps.</p>
+                    </article>
+                </div>
+
+                <div class="editorial-steps" aria-label="How NEURO-LEARN works">
+                    <article class="editorial-step">
+                        <div class="step-copy reveal-left">
+                            <span class="step-ghost">01</span>
+                            <h3>The Child Plays</h3>
+                            <p>Age-based games designed for children from 2 to 12 years old. Every level matches their developmental stage. Colorful, engaging, and fun. They never know what is happening beneath the surface.</p>
+                        </div>
+                        <div class="step-visual step-visual-teal reveal-right">
+                            <i class="fas fa-gamepad" aria-hidden="true"></i>
+                            <span>Games &middot; Levels &middot; Play</span>
+                        </div>
+                    </article>
+                    <div class="step-divider"></div>
+                    <article class="editorial-step step-reversed">
+                        <div class="step-visual step-visual-blue reveal-left">
+                            <i class="fas fa-brain" aria-hidden="true"></i>
+                            <span>Data &middot; Patterns &middot; Analysis</span>
+                        </div>
+                        <div class="step-copy reveal-right">
+                            <span class="step-ghost ghost-blue">02</span>
+                            <h3>The AI Watches</h3>
+                            <p>Every tap, every delay, every mistake generates data. Response times, error patterns, and engagement duration are collected and analysed in real time by the embedded screening engine.</p>
+                        </div>
+                    </article>
+                    <div class="step-divider"></div>
+                    <article class="editorial-step">
+                        <div class="step-copy reveal-left">
+                            <span class="step-ghost ghost-orange">03</span>
+                            <h3>Learning Adapts</h3>
+                            <p>Content adjusts automatically to the child's unique performance profile. A child struggling with reading receives more targeted phonics exercises at exactly the right difficulty level &mdash; never bored, never overwhelmed.</p>
+                        </div>
+                        <div class="step-visual step-visual-orange reveal-right">
+                            <i class="fas fa-sliders-h" aria-hidden="true"></i>
+                            <span>Personalized &middot; Adaptive &middot; Smart</span>
+                        </div>
+                    </article>
+                    <div class="step-divider"></div>
+                    <article class="editorial-step step-reversed">
+                        <div class="step-visual step-visual-pink reveal-left">
+                            <i class="fas fa-bell" aria-hidden="true"></i>
+                            <span>Alerts &middot; Dashboard &middot; Action</span>
+                        </div>
+                        <div class="step-copy reveal-right">
+                            <span class="step-ghost ghost-pink">04</span>
+                            <h3>Parents Are Informed</h3>
+                            <p>When the AI detects consistent difficulty patterns, parents and teachers receive a clear plain-language alert through the dashboard &mdash; with specific recommended next steps for that child.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="how-image-strip reveal-up">
+                    <img src="{{ url_for('static', filename='images/child3.jpg') }}" alt="Boy lying on the floor using a tablet">
+                </div>
+            </div>
+        </section>
+
+        <section class="domains-section" id="domains">
+            <div class="domains-container">
+                <div class="domains-intro">
+                    <p class="section-label reveal-up">WHAT WE SCREEN FOR</p>
+                    <h2 class="reveal-up">Three core difficulty domains.</h2>
+                    <p class="reveal-up">NEURO-LEARN focuses on the three most prevalent and impactful childhood learning difficulties across Nigeria and West Africa.</p>
+                </div>
+
+                <div class="domains-layout">
+                    <div class="domains-image reveal-left">
+                        <img src="{{ url_for('static', filename='images/child4.jpg') }}" alt="Two boys sharing a tablet">
+                    </div>
+
+                    <div class="domain-cards" aria-label="Difficulty domains">
+                        <article class="domain-card domain-reading reveal-scale">
+                            <span>READING &amp; LITERACY</span>
+                            <h3>Dyslexia &amp; Reading Disorders</h3>
+                            <p>Detects slow letter recognition, reversal of letters and words, poor reading fluency, and avoidance of reading tasks through letter-matching and word-building games.</p>
+                        </article>
+                        <article class="domain-card domain-attention reveal-scale">
+                            <span>ATTENTION &amp; FOCUS</span>
+                            <h3>ADHD &amp; Attention Disorders</h3>
+                            <p>Identifies short task engagement, high error rates, inconsistent performance, and frequent task-restarting through memory and pattern-completion challenges.</p>
+                        </article>
+                        <article class="domain-card domain-speech reveal-scale">
+                            <span>COMMUNICATION &amp; SPEECH</span>
+                            <h3>Speech Delays &amp; Language Disorders</h3>
+                            <p>Flags delayed verbal response, difficulty following instructions, poor sound recognition, and limited vocabulary through voice-response and sound-matching activities.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section" id="team">
+            <div class="team-container">
+                <div class="team-intro">
+                    <p class="section-label reveal-up">THE TEAM</p>
+                    <h2 class="reveal-up">Built by passionate<span>innovators.</span></h2>
+                    <p class="reveal-up">A multidisciplinary team from Thomas Adewumi University combining clinical health, technology, criminology, and communication sciences.</p>
+                </div>
+
+                <article class="team-lead-card reveal-scale">
+                    <div class="team-lead-photo">
+                        <img src="{{ url_for('static', filename='images/team-patience.jpg') }}" alt="Ngilari-Samson Ijafiada Patience">
+                    </div>
+                    <div class="team-lead-content">
+                        <span class="team-lead-label">TEAM LEAD</span>
+                        <h3>Ngilari-Samson Ijafiada Patience</h3>
+                        <p class="team-lead-role">Clinical Lead &amp; Educational Content Developer</p>
+                        <span class="team-lead-tag">Nursing Science &middot; 300L &middot; Thomas Adewumi University</span>
+                        <p class="team-lead-bio">Provides clinical insight and child health expertise. Designs the educational content framework and validates all screening logic against established developmental milestones.</p>
+                    </div>
+                </article>
+
+                <div class="team-grid" aria-label="NEURO-LEARN team members">
+                    <article class="team-card team-card-gold reveal-scale">
+                        <img src="{{ url_for('static', filename='images/team-adebisi.jpg') }}" alt="Adebisi Sijuwade Michael">
+                        <span>APP DEVELOPER &amp; AI LEAD</span>
+                        <h3>Adebisi Sijuwade Michael</h3>
+                        <p>Computer Science &middot; 400L</p>
+                        <small>Thomas Adewumi University</small>
+                    </article>
+                    <article class="team-card team-card-blue reveal-scale">
+                        <img src="{{ url_for('static', filename='images/team-aderinsola.jpg') }}" alt="Oshobajo Aderinsola">
+                        <span>HEALTH RESEARCHER</span>
+                        <h3>Oshobajo Aderinsola</h3>
+                        <p>Nursing Science &middot; 300L</p>
+                        <small>Thomas Adewumi University</small>
+                    </article>
+                    <article class="team-card team-card-pink reveal-scale">
+                        <img src="{{ url_for('static', filename='images/team-oreoluwa.jpg') }}" alt="Oreoluwa Abolaji">
+                        <span>SOCIAL IMPACT ANALYST</span>
+                        <h3>Oreoluwa Abolaji</h3>
+                        <p>Criminology &amp; Security Studies &middot; 300L</p>
+                        <small>Thomas Adewumi University</small>
+                    </article>
+                    <article class="team-card team-card-purple reveal-scale">
+                        <img src="{{ url_for('static', filename='images/team-inyang.jpg') }}" alt="Inyang Bright Iboro">
+                        <span>COMMUNICATION &amp; CONTENT LEAD</span>
+                        <h3>Inyang Bright Iboro</h3>
+                        <p>Mass Communication &middot; 300L</p>
+                        <small>Thomas Adewumi University</small>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="download-section" id="download">
+            <div class="download-orb download-orb-one"></div>
+            <div class="download-orb download-orb-two"></div>
+
+            <div class="download-container">
+                <div class="download-copy reveal-left">
+                    <p class="download-label">DOWNLOAD THE APP</p>
+                    <h2>Available soon on<span>Android &amp; iOS.</span></h2>
+                    <p>NEURO-LEARN is currently in active development. We are building something extraordinary &mdash; a tool that will change how African children experience learning forever. Be the first to know when we launch.</p>
+
+                    <div class="store-buttons" aria-label="Upcoming app store availability">
+                        <div class="store-button" role="button" aria-disabled="true">
+                            <i class="fab fa-google-play" aria-hidden="true"></i>
+                            <span><small>Get it on</small><strong>Google Play</strong></span>
+                        </div>
+                        <div class="store-button" role="button" aria-disabled="true">
+                            <i class="fab fa-apple" aria-hidden="true"></i>
+                            <span><small>Download on the</small><strong>App Store</strong></span>
+                        </div>
+                    </div>
+
+                    <div class="coming-soon-badge">
+                        <span class="pulse-dot"></span>
+                        <span>Launching Soon &mdash; Join The Waitlist</span>
+                    </div>
+                </div>
+
+                <div class="phone-showcase reveal-right">
+                    <div class="phone-glow"></div>
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="phone-ring"></div>
+                            <img src="{{ url_for('static', filename='images/logo2.png') }}" alt="NEURO-LEARN app logo">
+                            <div class="phone-brand"><span>NEURO</span><span>LEARN</span></div>
+                            <p>COMING SOON</p>
+                            <div class="phone-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <img src="{{ url_for('static', filename='images/logo2.png') }}" alt="NEURO-LEARN logo">
+            <span><span>NEURO</span><span>LEARN</span></span>
+        </div>
+        <p>&copy; 2026 NEURO-LEARN &middot; Thomas Adewumi University</p>
+        <p>Contact: <a href="mailto:ngilari-samson.ijafiada@st.tau.edu.ng">ngilari-samson.ijafiada@st.tau.edu.ng</a></p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
