@@ -89,8 +89,9 @@ img {
 .nav-logo img {
     display: block;
     width: auto;
-    height: 54px;
+    height: 64px;
     background: transparent;
+    object-fit: contain;
     padding: 0;
     filter: none;
 }
@@ -120,7 +121,8 @@ img {
     }
 
     .nav-logo img {
-        height: 44px;
+        width: auto;
+        height: 50px;
     }
 
     .nav-logo span {
@@ -1289,8 +1291,14 @@ img {
     color: var(--color-teal);
 }
 
-.phone-screen p {
+.phone-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     margin-top: 20px;
+}
+
+.phone-screen p {
     color: var(--color-teal);
     font-size: 10px;
     font-weight: 700;
@@ -1308,19 +1316,38 @@ img {
 
 .phone-dots {
     display: flex;
-    gap: 6px;
-    margin-top: 30px;
+    align-items: center;
+    gap: 4px;
 }
 
 .phone-dots span {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--color-teal);
+    animation: phone-dot-wave 1.2s ease-in-out infinite;
 }
 
-.phone-dots span:first-child {
-    background: var(--color-teal);
+.phone-dots span:nth-child(2) {
+    animation-delay: 0.16s;
+}
+
+.phone-dots span:nth-child(3) {
+    animation-delay: 0.32s;
+}
+
+@keyframes phone-dot-wave {
+    0%,
+    80%,
+    100% {
+        opacity: 0.35;
+        transform: translateY(0);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translateY(-4px);
+    }
 }
 
 .site-footer {
@@ -1337,7 +1364,7 @@ img {
 .footer-brand {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0;
 }
 
 .footer-brand img {
@@ -1352,6 +1379,7 @@ img {
     font-size: 16px;
     font-weight: 900;
     letter-spacing: 1px;
+    margin-left: -8px;
 }
 
 .footer-brand > span span:last-child {
