@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.querySelector(".navbar");
     const navLinks = document.querySelectorAll('a[href^="#"]');
     const counters = document.querySelectorAll(".count-up");
     const revealItems = document.querySelectorAll(".reveal-left, .reveal-right, .reveal-up, .reveal-scale");
@@ -8,18 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const mobileMenu = document.getElementById("mobile-menu");
     const menuOverlay = document.getElementById("menu-overlay");
     const closeMenuBtn = document.getElementById("close-menu-btn");
-
-    const updateNavbar = () => {
-        if (!navbar) {
-            return;
-        }
-
-        if (window.scrollY > 60) {
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
-        }
-    };
 
     const updateHeroParallax = () => {
         if (!hero) {
@@ -171,10 +158,18 @@ document.addEventListener("DOMContentLoaded", () => {
         revealObserver.observe(item);
     });
 
-    updateNavbar();
     updateHeroParallax();
     window.addEventListener("scroll", () => {
-        updateNavbar();
+        const nav = document.querySelector("nav");
+
+        if (window.scrollY > 60) {
+            nav.classList.add("scrolled");
+        } else {
+            nav.classList.remove("scrolled");
+        }
+    });
+
+    window.addEventListener("scroll", () => {
         updateHeroParallax();
     }, { passive: true });
 });
