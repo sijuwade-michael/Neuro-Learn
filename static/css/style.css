@@ -90,7 +90,9 @@ img {
     display: block;
     width: auto;
     height: 54px;
-    filter: drop-shadow(0 0 6px rgba(0, 168, 150, 0.5));
+    background: transparent;
+    padding: 0;
+    filter: none;
 }
 
 .nav-logo span {
@@ -109,11 +111,14 @@ img {
 }
 
 .nav-logo:hover img {
-    filter: drop-shadow(0 0 10px rgba(0, 168, 150, 0.9));
-    transition: filter 0.3s ease;
+    filter: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 6px 5%;
+    }
+
     .nav-logo img {
         height: 44px;
     }
