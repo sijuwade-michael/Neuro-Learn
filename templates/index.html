@@ -28,18 +28,37 @@
                 <a href="#team">Our Team</a>
                 <a href="#download">Download App</a>
             </div>
+
+            <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+    <aside class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+        <button class="close-menu-btn" id="close-menu-btn" type="button" aria-label="Close menu">
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#how">How It Works</a>
+            <a href="#team">Our Team</a>
+            <a href="#download">Download App</a>
+        </nav>
+    </aside>
 
     <main>
         <section class="hero" id="home">
             <div class="hero-container">
                 <div class="hero-content">
                     <p class="hero-label">AI-POWERED LEARNING</p>
-                    <h1>Every Child Deserves To Be <span>Understood.</span></h1>
-                    <p class="hero-subheading">NEURO-LEARN detects learning difficulties in children aged 2&ndash;12 through games they love to play &mdash; while the AI screens silently in the background.</p>
+                    <h1 class="hero-heading">Every Child Deserves To Be <span>Understood.</span></h1>
+                    <p class="hero-subheading hero-subtext">NEURO-LEARN detects learning difficulties in children aged 2&ndash;12 through games they love to play &mdash; while the AI screens silently in the background.</p>
 
-                    <div class="hero-actions" aria-label="Hero actions">
+                    <div class="hero-actions hero-buttons" aria-label="Hero actions">
                         <a class="btn btn-primary" href="#how">See How It Works</a>
                         <a class="btn btn-secondary" href="#team">Meet The Team</a>
                     </div>
