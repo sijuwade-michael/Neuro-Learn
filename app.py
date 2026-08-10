@@ -5,7 +5,7 @@ from flask import Flask, render_template, send_from_directory
 
 app = Flask(__name__)
 APK_DIRECTORY = Path(app.static_folder) / "downloads"
-APK_FILENAME = "Neuro-Learn-v1.0.0-arm64.apk"
+APK_FILENAME = "Neuro-Learn-v1.0.0.apk"
 
 
 @app.route("/")
