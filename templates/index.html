@@ -27,7 +27,6 @@
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#how">How It Works</a>
-                <a href="#team">Our Team</a>
                 <a href="#download">Download App</a>
             </div>
 
@@ -47,7 +46,6 @@
         <nav>
             <a href="#about">About</a>
             <a href="#how">How It Works</a>
-            <a href="#team">Our Team</a>
             <a href="#download">Download App</a>
         </nav>
     </aside>
@@ -61,8 +59,18 @@
                     <p class="hero-subheading hero-subtext">NEURO-LEARN detects learning difficulties in children aged 2&ndash;12 through games they love to play &mdash; while the AI screens silently in the background.</p>
 
                     <div class="hero-actions hero-buttons" aria-label="Hero actions">
-                        <a class="btn btn-primary" href="#how">See How It Works</a>
-                        <a class="btn btn-secondary" href="#team">Meet The Team</a>
+                        {% if apk_available %}
+                        <a class="btn btn-primary" href="{{ url_for('download_android') }}" download>
+                            <i class="fab fa-android" aria-hidden="true"></i>
+                            Download for Android
+                        </a>
+                        {% else %}
+                        <a class="btn btn-primary btn-coming-soon" href="#download" aria-label="Android app coming soon">
+                            <i class="fab fa-android" aria-hidden="true"></i>
+                            Android App Coming Soon
+                        </a>
+                        {% endif %}
+                        <a class="btn btn-secondary" href="#how">See How It Works</a>
                     </div>
 
                     <div class="hero-stats" aria-label="NEURO-LEARN impact statistics">
@@ -247,60 +255,6 @@
             </div>
         </section>
 
-        <section class="team-section" id="team">
-            <div class="team-container">
-                <div class="team-intro">
-                    <p class="section-label reveal-up">THE TEAM</p>
-                    <h2 class="reveal-up">Built by passionate<span>innovators.</span></h2>
-                    <p class="reveal-up">A multidisciplinary team from Thomas Adewumi University combining clinical health, technology, criminology, and communication sciences.</p>
-                </div>
-
-                <article class="team-lead-card reveal-scale">
-                    <div class="team-lead-photo">
-                        <img src="{{ url_for('static', filename='images/team-patience.jpg') }}" alt="Ngilari-Samson Ijafiada Patience">
-                    </div>
-                    <div class="team-lead-content">
-                        <span class="team-lead-label">TEAM LEAD</span>
-                        <h3>Ngilari-Samson Ijafiada Patience</h3>
-                        <p class="team-lead-role">Clinical Lead &amp; Educational Content Developer</p>
-                        <span class="team-lead-tag">Nursing Science &middot; 300L &middot; Thomas Adewumi University</span>
-                        <p class="team-lead-bio">Provides clinical insight and child health expertise. Designs the educational content framework and validates all screening logic against established developmental milestones.</p>
-                    </div>
-                </article>
-
-                <div class="team-grid" aria-label="NEURO-LEARN team members">
-                    <article class="team-card team-card-gold reveal-scale">
-                        <img src="{{ url_for('static', filename='images/team-adebisi.jpg') }}" alt="Adebisi Sijuwade Michael">
-                        <span>APP DEVELOPER &amp; AI LEAD</span>
-                        <h3>Adebisi Sijuwade Michael</h3>
-                        <p>Computer Science &middot; 400L</p>
-                        <small>Thomas Adewumi University</small>
-                    </article>
-                    <article class="team-card team-card-blue reveal-scale">
-                        <img src="{{ url_for('static', filename='images/team-aderinsola.jpg') }}" alt="Oshobajo Aderinsola">
-                        <span>HEALTH RESEARCHER</span>
-                        <h3>Oshobajo Aderinsola</h3>
-                        <p>Nursing Science &middot; 300L</p>
-                        <small>Thomas Adewumi University</small>
-                    </article>
-                    <article class="team-card team-card-pink reveal-scale">
-                        <img src="{{ url_for('static', filename='images/team-oreoluwa.jpg') }}" alt="Oreoluwa Abolaji">
-                        <span>SOCIAL IMPACT ANALYST</span>
-                        <h3>Oreoluwa Abolaji</h3>
-                        <p>Criminology &amp; Security Studies &middot; 300L</p>
-                        <small>Thomas Adewumi University</small>
-                    </article>
-                    <article class="team-card team-card-purple reveal-scale">
-                        <img src="{{ url_for('static', filename='images/team-inyang.jpg') }}" alt="Inyang Bright Iboro">
-                        <span>COMMUNICATION &amp; CONTENT LEAD</span>
-                        <h3>Inyang Bright Iboro</h3>
-                        <p>Mass Communication &middot; 300L</p>
-                        <small>Thomas Adewumi University</small>
-                    </article>
-                </div>
-            </div>
-        </section>
-
         <section class="download-section" id="download">
             <div class="download-orb download-orb-one"></div>
             <div class="download-orb download-orb-two"></div>
@@ -308,23 +262,27 @@
             <div class="download-container">
                 <div class="download-copy reveal-left">
                     <p class="download-label">DOWNLOAD THE APP</p>
-                    <h2>Available soon on<span>Android &amp; iOS.</span></h2>
-                    <p>NEURO-LEARN is currently in active development. We are building something extraordinary &mdash; a tool that will change how African children experience learning forever. Be the first to know when we launch.</p>
+                    <h2>Learning support,<span>right on your phone.</span></h2>
+                    <p>Download NEURO-LEARN for Android and give your child access to engaging, age-appropriate learning games that adapt to how they learn.</p>
 
-                    <div class="store-buttons" aria-label="Upcoming app store availability">
-                        <div class="store-button" role="button" aria-disabled="true">
+                    <div class="store-buttons" aria-label="Android app download">
+                        {% if apk_available %}
+                        <a class="store-button store-button-active" href="{{ url_for('download_android') }}" download>
                             <i class="fab fa-google-play" aria-hidden="true"></i>
-                            <span><small>Get it on</small><strong>Google Play</strong></span>
+                            <span><small>Download for</small><strong>Android</strong></span>
+                            <i class="fas fa-download download-icon" aria-hidden="true"></i>
+                        </a>
+                        {% else %}
+                        <div class="store-button" aria-disabled="true">
+                            <i class="fab fa-android" aria-hidden="true"></i>
+                            <span><small>Android download</small><strong>Available soon</strong></span>
                         </div>
-                        <div class="store-button" role="button" aria-disabled="true">
-                            <i class="fab fa-apple" aria-hidden="true"></i>
-                            <span><small>Download on the</small><strong>App Store</strong></span>
-                        </div>
+                        {% endif %}
                     </div>
 
                     <div class="coming-soon-badge">
                         <span class="pulse-dot"></span>
-                        <span>Launching Soon &mdash; Join The Waitlist</span>
+                        <span>{% if apk_available %}APK ready to download{% else %}Android APK being prepared{% endif %}</span>
                     </div>
                 </div>
 
@@ -337,7 +295,7 @@
                             <img src="{{ url_for('static', filename='images/logo4.png') }}" alt="NEURO-LEARN app logo">
                             <div class="phone-brand"><span>NEURO</span><span>LEARN</span></div>
                             <div class="phone-status">
-                                <p>COMING SOON</p>
+                                <p>{% if apk_available %}DOWNLOAD NOW{% else %}COMING SOON{% endif %}</p>
                                 <div class="phone-dots" aria-hidden="true">
                                     <span></span>
                                     <span></span>
@@ -356,8 +314,7 @@
             <img src="{{ url_for('static', filename='images/logo4.png') }}" alt="NEURO-LEARN logo">
             <span><span>NEURO</span><span>LEARN</span></span>
         </div>
-        <p>&copy; 2026 NEURO-LEARN &middot; Thomas Adewumi University</p>
-        <p>Contact: <a href="mailto:ngilari-samson.ijafiada@st.tau.edu.ng">ngilari-samson.ijafiada@st.tau.edu.ng</a></p>
+        <p>&copy; 2026 NEURO-LEARN. All rights reserved.</p>
     </footer>
 
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>

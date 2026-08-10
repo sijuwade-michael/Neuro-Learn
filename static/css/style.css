@@ -278,6 +278,11 @@ img {
     transition: transform 200ms ease, background 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
 }
 
+.btn i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
 .btn:hover,
 .btn:focus-visible {
     transform: translateY(-2px);
@@ -293,6 +298,10 @@ img {
 .btn-primary:focus-visible {
     background: #02B9A6;
     box-shadow: 0 20px 44px rgba(0, 168, 150, 0.32);
+}
+
+.btn-coming-soon {
+    background: rgba(0, 168, 150, 0.82);
 }
 
 .btn-secondary {
@@ -1164,6 +1173,30 @@ img {
     background: rgba(255, 255, 255, 0.06);
     padding: 16px 28px;
     cursor: default;
+}
+
+.store-button-active {
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 200ms ease, border-color 200ms ease, transform 200ms ease;
+}
+
+.store-button-active:hover,
+.store-button-active:focus-visible {
+    border-color: var(--color-teal);
+    background: rgba(0, 168, 150, 0.18);
+    transform: translateY(-3px);
+}
+
+.store-button .fa-android {
+    color: var(--color-teal);
+    font-size: 30px;
+}
+
+.store-button .download-icon {
+    margin-left: 10px;
+    color: var(--color-teal);
+    font-size: 16px;
 }
 
 .store-button .fa-google-play {
