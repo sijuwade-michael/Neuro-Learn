@@ -27,6 +27,7 @@
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#how">How It Works</a>
+                <a href="#demo">Demo</a>
                 <a href="#download">Download App</a>
             </div>
 
@@ -46,6 +47,7 @@
         <nav>
             <a href="#about">About</a>
             <a href="#how">How It Works</a>
+            <a href="#demo">Demo</a>
             <a href="#download">Download App</a>
         </nav>
     </aside>
@@ -251,6 +253,23 @@
                             <p>Flags delayed verbal response, difficulty following instructions, poor sound recognition, and limited vocabulary through voice-response and sound-matching activities.</p>
                         </article>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section" id="demo" aria-labelledby="demo-heading">
+            <div class="demo-container">
+                <div class="demo-intro reveal-up">
+                    <p class="section-label">SEE NEURO-LEARN IN ACTION</p>
+                    <h2 id="demo-heading">A better way to understand <span>how children learn.</span></h2>
+                    <p>Watch a short demonstration of how NEURO-LEARN turns play into meaningful learning support.</p>
+                </div>
+
+                <div class="demo-video-wrap reveal-up">
+                    <video class="demo-video" controls preload="metadata" playsinline aria-label="NEURO-LEARN product demonstration">
+                        <source src="{{ url_for('static', filename='videos/neuro-learn-demo.mp4') }}" type="video/mp4">
+                        Your browser does not support HTML video. Please download the video to watch it.
+                    </video>
                 </div>
             </div>
         </section>

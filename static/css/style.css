@@ -902,6 +902,57 @@ img {
     line-height: 1.65;
 }
 
+.demo-section {
+    background: #F8FAFC;
+    padding: 100px 8%;
+}
+
+.demo-container {
+    width: min(980px, 100%);
+    margin: 0 auto;
+}
+
+.demo-intro {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.demo-intro h2 {
+    color: var(--color-navy);
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.12;
+}
+
+.demo-intro h2 span {
+    color: var(--color-teal);
+}
+
+.demo-intro > p:last-child {
+    margin-top: 22px;
+    color: #475569;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.demo-video-wrap {
+    margin-top: 52px;
+    border: 1px solid rgba(0, 168, 150, 0.25);
+    border-radius: 20px;
+    background: var(--color-navy);
+    padding: 10px;
+    box-shadow: 0 24px 60px rgba(13, 27, 62, 0.2);
+}
+
+.demo-video {
+    display: block;
+    width: 100%;
+    max-height: 640px;
+    border-radius: 12px;
+    background: #060E1F;
+}
+
 .team-section {
     background: #F8FAFC;
     padding: 100px 8%;
@@ -2028,6 +2079,7 @@ img {
     .problem-section,
     .how-section,
     .domains-section,
+    .demo-section,
     .team-section,
     .download-section {
         padding: 70px 6%;
@@ -2036,9 +2088,16 @@ img {
     .problem-copy h2,
     .how-intro h2,
     .domains-intro h2,
+    .demo-intro h2,
     .team-intro h2,
     .download-copy h2 {
         font-size: 36px;
+    }
+
+    .demo-video-wrap {
+        margin-top: 36px;
+        border-radius: 14px;
+        padding: 6px;
     }
 
     .problem-split,
